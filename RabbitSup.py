@@ -6,8 +6,8 @@ import torch.optim as optim
 ##np.seed(42) se eu quiser que se mantenha as amostras
 
 X = np.random.uniform(0,100(100,5)) ##por agora vou criar diferentes dados para treinamento
-
-y = ((X[:, 0] < 30) & (X[:, 2] < 30)).astype(int) ## isso que deixaria ele apredizado supervisionado
+#definir uma regra
+y = ((X[:, 0] < 30) & (X[:, 2] < 30)).astype(int) ## isso que deixa ele apredizado supervisionado
 
 X_tensor = torch.tensor(X,dtype=torch.float32)
 y_tensor = torch.tensor(y, dtype=torch.float32).view(-1, 1)
